@@ -1,0 +1,28 @@
+.footer-container {
+  max-width: 1200px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #000;
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #ccc;
+  align-items: center;
+}
+
+.footer-contato li {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: right;
+}
+.footer-container {
+  color: gainsboro;
+}

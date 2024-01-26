@@ -1,0 +1,10 @@
+@import "./global.css";
+@import "./header.css";
+@import "./introducao.css";
+@import "./experiencia.css";
+@import "./formacao.css";
+@import "./footer.css";
+
+h1 h2 h3 p {
+  margin: 0px;
+}
