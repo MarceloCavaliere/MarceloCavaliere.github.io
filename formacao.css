@@ -9,6 +9,7 @@
 }
 #formacao-subtitulo {
   font-size: 6rem;
+  color: #e0e0e0;
 }
 
 .formacao-texto {
@@ -73,6 +74,11 @@
   height: 20px;
   background: linear-gradient(#67dd0a, #b6f829);
   left: -7px;
+}
+
+#portfolio {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1001px) {
