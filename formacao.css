@@ -75,10 +75,24 @@
   background: linear-gradient(#67dd0a, #b6f829);
   left: -7px;
 }
+#pai-portifolio {
+  position: relative;
+}
 
 #portfolio {
   color: #fff;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0px;
+}
+#portfolio::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#67dd0a, #b6f829);
+  left: -7px;
 }
 
 @media (min-width: 1001px) {

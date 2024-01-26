@@ -9,14 +9,13 @@
 }
 
 .footer-texto {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.33;
   color: #ccc;
   align-items: center;
 }
 
 .footer-contato li {
-  font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.1;
   color: #fff;
@@ -30,6 +29,12 @@
 a {
   color: #fff;
 }
+
+.origamid {
+  text-align: center;
+  padding: 10px;
+}
+
 @media (max-width: 800px) {
   .footer-container {
     grid-template-columns: 1fr;
