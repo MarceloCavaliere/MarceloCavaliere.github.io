@@ -1,0 +1,293 @@
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+blockquote {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.logo {
+  max-width: 200px;
+  /* border: 4px solid black; */
+}
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas:
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.125rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* border: 2px solid purple; */
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.header li + li {
+  margin-left: 30px;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  border-radius: 5px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 5px 5px 15px 0px gray;
+  transition: 0.15s;
+}
+
+.sidenav li a:hover {
+  background: #b07dfb;
+}
+
+.content {
+  grid-area: content;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.titulo {
+  color: #b07dfb;
+}
+.titulo h1 {
+  line-height: 1;
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+.titulo span {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: -0.005rem;
+}
+
+.margin p + p {
+  margin-top: 30px;
+}
+.col-wide {
+  grid-column: 1/-1;
+}
+
+.caracteristicacas {
+  display: flex;
+  align-items: flex-start;
+  justify-self: flex-end;
+}
+.caracteristicacas > div {
+  text-align: center;
+  width: 80px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px gray;
+}
+
+.caracteristicacas > div:first-child {
+  margin-right: 30px;
+}
+.caracteristicacas span {
+  display: block;
+  color: #b07dfb;
+}
+.numero {
+  color: #b07dfb;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 10px auto;
+}
+.rotulo {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 5px 0;
+}
+.destaque {
+  color: #b07dfb;
+  font-size: 0.875rem;
+  max-width: 19rem;
+}
+.lobo1 {
+  grid-row: span 2;
+  align-self: end;
+}
+.lobo2 {
+  align-self: end;
+}
+
+.citacao,
+.atributos {
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  color: #fff;
+  align-self: start;
+}
+
+.citacao p {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
+  color: #fff;
+}
+.atributos li {
+  font-family: "Courier New", Courier, monospace;
+  padding: 15px;
+}
+.atributos li + li {
+  border-top: 2px solid #b07dfb;
+}
+
+.anuncios {
+  grid-area: anuncios;
+  background: #fafbfc;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #b07dfb;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+@media (max-width: 1000px) {
+  .estrutura {
+    grid-template-areas:
+      "header header  header "
+      "sidenav content content "
+      "sidenav anuncios anuncios"
+      "footer footer footer";
+  }
+  .anuncios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-areas:
+      "header header  header "
+      "sidenav sidenav sidenav "
+      "content content content"
+      "anuncios anuncios anuncios"
+      "footer footer footer";
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .sidenav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sidenav ul li {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+  }
+  .sidenav ul li + li {
+    margin-left: 10px;
+  }
+  .sidenav {
+    padding-top: 10px;
+    margin: 10px auto;
+  }
+  .sidenav li a {
+    margin: 0 auto;
+  }
+
+  .caracteristicacas {
+    justify-self: left;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 30px;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 1fr;
+  }
+  .header li + li {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+}
