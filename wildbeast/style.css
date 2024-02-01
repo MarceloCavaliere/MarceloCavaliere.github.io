@@ -277,12 +277,11 @@ p {
     gap: 10px;
     padding-top: 30px;
   }
+
   header nav {
     margin-top: 10px;
   }
-}
 
-@media (max-width: 760px) {
   .estrutura {
     grid-template-columns: 1fr;
   }
